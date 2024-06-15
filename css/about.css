@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+:root{
+    --blue-dark: rgb(43,68,180) ;
+    --blue-light: rgb(157,239,241) ;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
+    font-size: 1.6rem;
+    line-height: 1.5;
+    position: relative;
+    background-color: #c9ced3;
+}
+
+.container{
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 
+
+App Style
+
+*/
+
+
+.bg-wrapper{
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+  z-index: -1;
+}
+.bg-wrapper__img{
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+    filter: blur(15px);
+    -webkit-filter: blur(50px);
+    transform: scale(1.1); 
+}
+
+/* 
+
+player
+
+*/
+
+.bg-wrapper{
+
+}
+.bg-wrapper__img{
+
+}
+
+.player{
+    width: 40rem;
+    height: 50rem;
+    background: #dddddd;
+    padding: 2rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 12px 2rem #00000087;
+}
+.player__img-wrapper{
+   width: 32rem;
+   height: 30rem;
+   border-radius: 2rem;
+   overflow: hidden;
+   position: relative;
+   bottom: 70px;
+    
+}
+.player__img{
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  object-fit: cover;
+  animation: faid .5s;
+  box-shadow: 0px 6px 2rem #000000ad;
+  transition: all .5s;
+}
+.player__info{
+    text-align: center;
+    margin-top: -2rem;
+}
+.player__title{
+  font-size: 2.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.player__singer{
+  margin-bottom: 3rem;
+}
+.player__audio{
+
+}    
+.player__progress-container{
+   width: 90%;
+   height: .5rem;
+   background-color: #fff; 
+   border-radius: 9999px;
+   margin: 4rem 0 2rem;
+   text-align: center;
+   position: relative;
+   cursor: pointer;
+}
+.player__duration{
+    position: relative;
+    top: -2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.player__progress{
+   width: 0%;
+   height: 100%;
+   background-color: #0a0808;
+   border-radius: 999px;
+   position: absolute;
+   top: 0;
+   cursor: pointer;
+}
+.player__controls{
+   font-size: 3rem;
+   color: rgb(129, 129, 129) ;
+   display: flex;
+   align-items: center;
+   gap: 3rem;
+}
+#play-icon{
+    font-size: 4rem;
+}
+.fas{
+    cursor: pointer;
+    transition: all .1s;
+}
+.fas:hover{
+    filter: brightness(80%);
+    transform: scale(1.1);
+}
+.active{
+    height: 100%;
+    opacity: 1;
+}
